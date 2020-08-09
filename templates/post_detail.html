@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<div class="post-entry">
+    <h2>{{ anything_you_want.title }}</h2>
+    <p>{{ anything_you_want.body }}</p>
+</div>
+<a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a>
+</body>
+{% endblock content %}
+</html>
